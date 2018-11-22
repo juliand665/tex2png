@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		950BB6A921A5E6A500994B50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BB6A821A5E6A500994B50 /* AppDelegate.swift */; };
+		950BB6AB21A5E6A500994B50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BB6AA21A5E6A500994B50 /* ViewController.swift */; };
+		950BB6AD21A5E6AA00994B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950BB6AC21A5E6AA00994B50 /* Assets.xcassets */; };
+		950BB6B021A5E6AA00994B50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950BB6AE21A5E6AA00994B50 /* Main.storyboard */; };
+		95708FBB21A6436B0032A10E /* LZ4Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95708FBA21A6436B0032A10E /* LZ4Decoder.swift */; };
+		95708FC321A643D00032A10E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95708FC221A643D00032A10E /* main.swift */; };
+		95708FC721A646200032A10E /* LZ4Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95708FBA21A6436B0032A10E /* LZ4Decoder.swift */; };
+		95708FD121A693CB0032A10E /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95708FD021A693CB0032A10E /* Texture.swift */; };
+		95708FD221A693CB0032A10E /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95708FD021A693CB0032A10E /* Texture.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		95708FB821A62B520032A10E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95708FBE21A643D00032A10E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		950BB6A521A5E6A500994B50 /* Exapunks Textures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exapunks Textures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		950BB6A821A5E6A500994B50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		950BB6AA21A5E6A500994B50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		950BB6AC21A5E6AA00994B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		950BB6AF21A5E6AA00994B50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		950BB6B121A5E6AA00994B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950BB6B221A5E6AA00994B50 /* Exapunks_Textures.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Exapunks_Textures.entitlements; sourceTree = "<group>"; };
+		95708FBA21A6436B0032A10E /* LZ4Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LZ4Decoder.swift; sourceTree = "<group>"; };
+		95708FC021A643D00032A10E /* tex2png */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tex2png; sourceTree = BUILT_PRODUCTS_DIR; };
+		95708FC221A643D00032A10E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		95708FCA21A648190032A10E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		95708FD021A693CB0032A10E /* Texture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		950BB6A221A5E6A500994B50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95708FBD21A643D00032A10E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		950BB69C21A5E6A500994B50 = {
+			isa = PBXGroup;
+			children = (
+				95708FB921A643480032A10E /* Shared */,
+				950BB6A721A5E6A500994B50 /* Exapunks Textures */,
+				95708FC121A643D00032A10E /* tex2png */,
+				950BB6A621A5E6A500994B50 /* Products */,
+				95708FC821A646430032A10E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		950BB6A621A5E6A500994B50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				950BB6A521A5E6A500994B50 /* Exapunks Textures.app */,
+				95708FC021A643D00032A10E /* tex2png */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		950BB6A721A5E6A500994B50 /* Exapunks Textures */ = {
+			isa = PBXGroup;
+			children = (
+				950BB6A821A5E6A500994B50 /* AppDelegate.swift */,
+				950BB6AA21A5E6A500994B50 /* ViewController.swift */,
+				950BB6AC21A5E6AA00994B50 /* Assets.xcassets */,
+				950BB6AE21A5E6AA00994B50 /* Main.storyboard */,
+				950BB6B121A5E6AA00994B50 /* Info.plist */,
+				950BB6B221A5E6AA00994B50 /* Exapunks_Textures.entitlements */,
+			);
+			path = "Exapunks Textures";
+			sourceTree = "<group>";
+		};
+		95708FB921A643480032A10E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				95708FBA21A6436B0032A10E /* LZ4Decoder.swift */,
+				95708FD021A693CB0032A10E /* Texture.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		95708FC121A643D00032A10E /* tex2png */ = {
+			isa = PBXGroup;
+			children = (
+				95708FC221A643D00032A10E /* main.swift */,
+			);
+			path = tex2png;
+			sourceTree = "<group>";
+		};
+		95708FC821A646430032A10E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95708FCA21A648190032A10E /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		950BB6A421A5E6A500994B50 /* Exapunks Textures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950BB6B521A5E6AA00994B50 /* Build configuration list for PBXNativeTarget "Exapunks Textures" */;
+			buildPhases = (
+				950BB6A121A5E6A500994B50 /* Sources */,
+				950BB6A221A5E6A500994B50 /* Frameworks */,
+				950BB6A321A5E6A500994B50 /* Resources */,
+				95708FB821A62B520032A10E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Exapunks Textures";
+			productName = "Exapunks Textures";
+			productReference = 950BB6A521A5E6A500994B50 /* Exapunks Textures.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95708FBF21A643D00032A10E /* tex2png */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95708FC421A643D00032A10E /* Build configuration list for PBXNativeTarget "tex2png" */;
+			buildPhases = (
+				95708FBC21A643D00032A10E /* Sources */,
+				95708FBD21A643D00032A10E /* Frameworks */,
+				95708FBE21A643D00032A10E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tex2png;
+			productName = tex2png;
+			productReference = 95708FC021A643D00032A10E /* tex2png */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		950BB69D21A5E6A500994B50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Julian Dunskus";
+				TargetAttributes = {
+					950BB6A421A5E6A500994B50 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					95708FBF21A643D00032A10E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 950BB6A021A5E6A500994B50 /* Build configuration list for PBXProject "Exapunks Textures" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 950BB69C21A5E6A500994B50;
+			productRefGroup = 950BB6A621A5E6A500994B50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				950BB6A421A5E6A500994B50 /* Exapunks Textures */,
+				95708FBF21A643D00032A10E /* tex2png */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		950BB6A321A5E6A500994B50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950BB6AD21A5E6AA00994B50 /* Assets.xcassets in Resources */,
+				950BB6B021A5E6AA00994B50 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		950BB6A121A5E6A500994B50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95708FBB21A6436B0032A10E /* LZ4Decoder.swift in Sources */,
+				95708FD121A693CB0032A10E /* Texture.swift in Sources */,
+				950BB6AB21A5E6A500994B50 /* ViewController.swift in Sources */,
+				950BB6A921A5E6A500994B50 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95708FBC21A643D00032A10E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95708FC321A643D00032A10E /* main.swift in Sources */,
+				95708FD221A693CB0032A10E /* Texture.swift in Sources */,
+				95708FC721A646200032A10E /* LZ4Decoder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		950BB6AE21A5E6AA00994B50 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950BB6AF21A5E6AA00994B50 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		950BB6B321A5E6AA00994B50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		950BB6B421A5E6AA00994B50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		950BB6B621A5E6AA00994B50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Exapunks Textures/Exapunks_Textures.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				INFOPLIST_FILE = "Exapunks Textures/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Exapunks-Textures";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		950BB6B721A5E6AA00994B50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Exapunks Textures/Exapunks_Textures.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				INFOPLIST_FILE = "Exapunks Textures/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juliand665.Exapunks-Textures";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		95708FC521A643D00032A10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		95708FC621A643D00032A10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		950BB6A021A5E6A500994B50 /* Build configuration list for PBXProject "Exapunks Textures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950BB6B321A5E6AA00994B50 /* Debug */,
+				950BB6B421A5E6AA00994B50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950BB6B521A5E6AA00994B50 /* Build configuration list for PBXNativeTarget "Exapunks Textures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950BB6B621A5E6AA00994B50 /* Debug */,
+				950BB6B721A5E6AA00994B50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95708FC421A643D00032A10E /* Build configuration list for PBXNativeTarget "tex2png" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95708FC521A643D00032A10E /* Debug */,
+				95708FC621A643D00032A10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 950BB69D21A5E6A500994B50 /* Project object */;
+}
