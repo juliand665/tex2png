@@ -17,6 +17,8 @@ final class LZ4Decoder {
 	init(for input: Data) {
 		self.input = input
 		self.position = input.startIndex
+		
+		output.reserveCapacity(input.count)
 	}
 	
 	func cancel() {
@@ -25,24 +27,29 @@ final class LZ4Decoder {
 	
 	func runAsync(completion: @escaping (Data?) -> Void) {
 		DispatchQueue.global(qos: .userInitiated).async {
+			var output = Data()
+			output.reserveCapacity(self.input.count)
+			
 			while self.isRunning {
-				self.readBlock()
+				self.readBlock(into: &output)
 			}
 			
-			completion(self.isFinished ? self.output : nil)
+			completion(self.isFinished ? output : nil)
 		}
 	}
 	
 	func runSync() -> Data {
 		while !isFinished {
-			readBlock()
+			readBlock(into: &output)
 		}
 		
 		return output
 	}
 	
-	private func readBlock() {
+	private func readBlock(into _output: inout Data) {
 		//print("position:", position)
+		
+		var output = _output
 		
 		var literalLength = peekByte() >> 4 & 0xF
 		var matchLength = popByte() & 0xF
@@ -54,6 +61,7 @@ final class LZ4Decoder {
 		guard position < input.endIndex else {
 			isRunning = false
 			isFinished = true
+			_output = output
 			return
 		}
 		
@@ -66,12 +74,16 @@ final class LZ4Decoder {
 		let startPos = output.endIndex - offset
 		
 		if abs(offset) >= matchLength {
-			output.append(output[startPos..<startPos + matchLength])
+			var match = output[startPos..<startPos + matchLength]
+			match.withUnsafeMutableBytes { _ in } // ensure unique reference
+			output.append(match)
 		} else {
 			for position in startPos..<startPos + matchLength {
 				output.append(output[position])
 			}
 		}
+		
+		_output = output
 	}
 	
 	private func decodeLSICInteger(into value: inout Int) {

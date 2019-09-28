@@ -7,6 +7,7 @@ let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
 let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue
 
 final class Texture {
+	let name: String
 	let width: Int
 	let height: Int
 	var state: State
@@ -14,6 +15,7 @@ final class Texture {
 	init(at url: URL) throws {
 		let data = try Data(contentsOf: url)
 		
+		name = url.lastPathComponent.components(separatedBy: ".tex").first!
 		width = Int(data.read(UInt32.self, at: 4))
 		height = Int(data.read(UInt32.self, at: 8))
 		state = .decoding(LZ4Decoder(for: data[60...]))

@@ -41,6 +41,27 @@ class ViewController: NSViewController {
 		}
 	}
 	
+	@IBAction func saveImage(_ sender: Any) {
+		guard
+			let texture = self.texture,
+			case .decoded(let image) = texture.state
+			else { return }
+		
+		let savePanel = NSOpenPanel()
+		savePanel.canChooseDirectories = true
+		savePanel.canChooseFiles = false
+		let result = savePanel.runModal()
+		guard result == .OK else { return }
+		let url = savePanel.urls.first!
+		
+		do {
+			let png = NSBitmapImageRep(cgImage: image).representation(using: .png, properties: [:])!
+			try png.write(to: url.appendingPathComponent("\(texture.name).png"))
+		} catch {
+			NSAlert(error: error).runModal()
+		}
+	}
+	
 	var texture: Texture?
 	var updateTimer: Timer?
 	
