@@ -8,6 +8,7 @@ let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue
 
 final class Texture {
 	let name: String
+	let version: Int
 	let width: Int
 	let height: Int
 	var state: State
@@ -16,9 +17,15 @@ final class Texture {
 		let data = try Data(contentsOf: url)
 		
 		name = url.lastPathComponent.components(separatedBy: ".tex").first!
-		width = Int(data.read(UInt32.self, at: 4))
-		height = Int(data.read(UInt32.self, at: 8))
-		state = .decoding(LZ4Decoder(for: data[60...]))
+		
+		version = Int(data.read(UInt32.self, at: 0))
+		
+		let sizeOffset = version < 1004 ? 4 : 8
+		width = Int(data.read(UInt32.self, at: sizeOffset))
+		height = Int(data.read(UInt32.self, at: sizeOffset + 4))
+		
+		let lz4Offset = version < 1004 ? 60 : 68
+		state = .decoding(LZ4Decoder(for: data[lz4Offset...]))
 	}
 	
 	func decode() -> CGImage {
