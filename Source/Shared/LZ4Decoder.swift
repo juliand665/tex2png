@@ -46,10 +46,8 @@ final class LZ4Decoder {
 		return output
 	}
 	
-	private func readBlock(into _output: inout Data) {
+	private func readBlock(into output: inout Data) {
 		//print("position:", position)
-		
-		var output = _output
 		
 		var literalLength = peekByte() >> 4 & 0xF
 		var matchLength = popByte() & 0xF
@@ -61,7 +59,6 @@ final class LZ4Decoder {
 		guard position < input.endIndex else {
 			isRunning = false
 			isFinished = true
-			_output = output
 			return
 		}
 		
@@ -82,8 +79,6 @@ final class LZ4Decoder {
 				output.append(output[position])
 			}
 		}
-		
-		_output = output
 	}
 	
 	private func decodeLSICInteger(into value: inout Int) {
